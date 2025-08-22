@@ -1,6 +1,3 @@
-// script.js
-
-// Smooth scroll for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -10,11 +7,9 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
   });
 });
-
-// Highlight active nav link while scrolling
 window.addEventListener('scroll', () => {
   let sections = document.querySelectorAll("section");
-  let scrollPos = window.scrollY + 100; // offset for header
+  let scrollPos = window.scrollY + 100; 
 
   sections.forEach(section => {
     if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
@@ -27,9 +22,7 @@ window.addEventListener('scroll', () => {
     }
   });
 });
-
-// Typing effect for header tagline
-const text = "Aspiring Developer | Designer | Creator";
+const text = "Aspiring Developer | Aspiring Cryptographer | Aspiring Mathematician | Aspiring Data Scientist";
 let index = 0;
 
 function typeEffect() {
@@ -39,8 +32,6 @@ function typeEffect() {
     setTimeout(typeEffect, 80);
   }
 }
-
-// Clear existing tagline and start typing effect
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("header p").innerHTML = "";
   typeEffect();
